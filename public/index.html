@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector</title>
+    <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    #heading {
+        color: #ffcccb;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    }
+    
+    #message {
+        width: 500px;
+        height: 100px;
+        border-radius: 15px;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        color: white;
+        outline: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+    }
+    
+    #message::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    #message:focus {
+        border: 2px solid #ffcccb;
+        box-shadow: 0 0 15px rgba(255, 204, 203, 0.6);
+    }
+    
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        background: linear-gradient(135deg, #ff6b6b, #ff4757);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.3s ease;
+        box-shadow: 0 5px 15px rgba(255, 75, 75, 0.4);
+    }
+    
+    button:hover {
+        background: linear-gradient(135deg, #ff4757, #e63946);
+        transform: scale(1.05);
+    }
+    
+    button:active {
+        transform: scale(0.98);
+    }
+    
+    #result {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #ffcccb;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+</style>    
+</head>
+<body>
+    <h2 id="heading">Spam Message Detector</h2>
+    <textarea id="message" placeholder="Enter your message..."></textarea><br>
+    <button onclick="checkSpam()">Check Spam</button>
+    <p id="result"></p>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
